@@ -14,7 +14,4 @@ public class CardsList {
     }
 
 
-    //public void push(Cards card){
-    //    stack.push(card);
-    //}
 }

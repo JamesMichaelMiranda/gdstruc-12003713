@@ -1,38 +1,32 @@
 package com.gdstruc.module2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Player> playerList = new ArrayList<>();
+        Player sandstorm = new Player(1, "Sandstorm", 46);
+        Player jt = new Player(2,"JT",27);
+        Player eggsoup = new Player(3,"Eggsoup", 68);
+        Player swerpy =new Player(4, "Swerpy", 24);
+        Player ash = new Player(5, "Ash", 70);
+        Player bunny =new Player(6, "Bunny", 48);
 
-        playerList.add(new Player(1,"Sandstorm", 50));
-        playerList.add(new Player(2, "Eggsoup", 178));
-        playerList.add(new Player(3, "JT", 447));
-        playerList.add(new Player(4, "Swerpy", 24));
-        playerList.add(new Player(5, "Ash", 70));
-        playerList.add(new Player(6, "Bunny", 48));
+        PlayerLinkedList playerLinkedList = new PlayerLinkedList();
 
-        playerList.remove(0); // removes the first element
+        playerLinkedList.addToFront(sandstorm);
+        playerLinkedList.addToFront(ash);
+        playerLinkedList.addToFront(bunny);
+        playerLinkedList.addToFront(jt);
+        playerLinkedList.addToFront(eggsoup);
+        playerLinkedList.addToFront(swerpy);
 
-        for(Player p : playerList){
-            System.out.println(p);
-        }
+        playerLinkedList.remove(swerpy);//removes a player
 
-        System.out.println("List size:" + playerList.size()); // shows the size of the elements present
+        playerLinkedList.size();//displays the size
 
-        System.out.println(playerList.contains("Pikachu"));
+        playerLinkedList.contains(pikachu);// see's if there is an element
 
-        int index = playerList.indexOf(10);
+        playerLinkedList.indexOf(ash);//see's instance of an element
 
-        if(index == - 1){
-            System.out.println("Element not found");
-        }else{
-            System.out.println("Element found at index " + index);
-        }
-        
     }
 }

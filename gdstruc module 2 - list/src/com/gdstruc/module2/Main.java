@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args)
     {
 
-	    List<Player> playerList = new ArrayList<>();
+	    //List<Player> playerList = new ArrayList<>();
 
-        playerList.add(new Player(1,"Nox" , 69));
+        //playerList.add(new Player(1,"Nox" , 69));
         //playerList.add(new Player(2, "Lymtex", 178));
         //playerList.add(new Player(3, "JT", 447));
 
@@ -22,12 +22,19 @@ public class Main {
         //    System.out.println(p);
         //}
 
+
+
         Player nox = new Player(1, "Nox", 46);
         Player lymtex = new Player(2,"Lymtex", 576);
         Player jt = new Player(3, "JT", 47);
 
-        playerLinkedList.printList(playerList.contains(nox));
+        PlayerLinkList playerLinkList = new PlayerLinkList();
 
+        playerLinkList.addToFront(jt);
+        playerLinkList.addToFront(nox);
+        playerLinkList.addToFront(lymtex);
+
+        playerLinkList.printList();
     }
 
 

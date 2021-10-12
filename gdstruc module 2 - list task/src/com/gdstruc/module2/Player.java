@@ -1,5 +1,7 @@
 package com.gdstruc.module2;
 
+import java.util.Objects;
+
 public class Player {
 
     private int id;

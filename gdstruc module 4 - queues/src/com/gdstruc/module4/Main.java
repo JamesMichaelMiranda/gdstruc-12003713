@@ -15,7 +15,7 @@ public class Main {
         queue.add(new Player(5, "Lymtex", 80));
 
         int min = 1;
-        int max = 5;
+        int max = 7;
         int randomNumber = (int)Math.floor(Math.random()*(max-min+1)+min);
 
 

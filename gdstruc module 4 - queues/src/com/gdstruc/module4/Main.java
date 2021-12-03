@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayQueue queue = new ArrayQueue(7);
+        ArrayQueue queue = new ArrayQueue(5);
 
         queue.add(new Player(1,"Nox", 20));
         queue.add(new Player(2,"Steven", 46));
@@ -14,18 +14,23 @@ public class Main {
         queue.add(new Player(4, "JT", 78));
         queue.add(new Player(5, "Lymtex", 80));
 
-        int min = 1;
-        int max = 7;
-        int randomNumber = (int)Math.floor(Math.random()*(max-min+1)+min);
 
+       for(int i = 0; i < 10; i++) {
 
-        if (randomNumber != 5) {
-            System.out.println("You have not entered Queue");
-        }
+           int min = 1;
+           int max = 7;
+           int randomNumber = (int)Math.floor(Math.random()*(max-min+1)+min);
 
-        else if (randomNumber == 5) {
-            System.out.println(randomNumber + " players have entered the queue");
-            queue.printQueue();
-        }
+           if (randomNumber == 5) {
+               System.out.println(randomNumber + " players have entered the queue");
+               queue.printQueue();
+               System.out.println("\n");
+           }
+
+           else if (randomNumber != 5) {
+               System.out.println("You have not entered Queue \n");
+           }
+
+       }
     }
 }
